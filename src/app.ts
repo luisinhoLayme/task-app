@@ -11,7 +11,7 @@ const main = async () => {
   })
 
   const server = new Server({
-    port: envs.PORT ?? 5000,
+    port: envs.PORT || 5000,
     routes: AppRouter.routes
   })
 
