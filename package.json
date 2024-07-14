@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "tsnd --respawn --clear --rs --env-file=.env src/app.ts",
     "build": "rimraf ./dist && tsc",
-    "start": "yarn build && node --env-file=.env dist/app.js"
+    "start": "yarn build && node dist/app.js"
   },
   "keywords": [],
   "author": "Luisinho Dev",
@@ -28,6 +28,7 @@
     "bcryptjs": "^2.4.3",
     "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
     "env-var": "^7.5.0",
     "express": "^4.19.2",
     "google-auth-library": "^9.11.0",
