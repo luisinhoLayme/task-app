@@ -3,8 +3,8 @@ import { AuthService } from "../services/auth.service";
 import { HandleError, LoginDto, RegisterDto } from "../../domain";
 
 export class AuthController {
-  private optionAuth: CookieOptions = { httpOnly: true, sameSite: 'none', secure: true, maxAge: 2000 * 60 * 60, domain: 'consumir-api-task.netlify.app' }
-  private optionRefresh: CookieOptions = { httpOnly: true, sameSite: 'none', secure: true, domain: 'consumir-api-task.netlify.app'}
+  private optionAuth: CookieOptions = { httpOnly: true, sameSite: 'none', secure: true, maxAge: 2000 * 60 * 60 }
+  private optionRefresh: CookieOptions = { httpOnly: true, sameSite: 'none', secure: true }
 
   constructor(
     public readonly authService: AuthService
