@@ -1,8 +1,6 @@
 import { CookieOptions, Request, Response } from "express";
 import { AuthService } from "../services/auth.service";
 import { HandleError, LoginDto, RegisterDto } from "../../domain";
-import { envs } from "../../config";
-import axios from "axios";
 
 export class AuthController {
   private optionAuth: CookieOptions = { httpOnly: true, sameSite: 'strict', maxAge: 2000 * 60 * 60 }
