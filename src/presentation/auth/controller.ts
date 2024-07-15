@@ -38,18 +38,6 @@ export class AuthController {
       .catch(error => HandleError.error(error, res))
   }
 
-  public googleSignIn = (req: Request, res: Response) => {
-    const { googleToken } = req.body
-
-    this.authService.googleSignIn(googleToken)
-      .then(({ user, token, refreshToken }) => res
-        .cookie('authorization', token, this.optionAuth)
-        .cookie('refreshToken', refreshToken, this.optionRefresh)
-        .json(user)
-      )
-      .catch(error => HandleError.error(error, res))
-  }
-
   public refreshTokenUser = (req: Request, res: Response) => {
     const refreshToken = req.cookies.refreshToken
     console.log(req.body.user)
