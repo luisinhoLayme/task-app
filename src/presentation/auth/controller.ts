@@ -3,8 +3,8 @@ import { AuthService } from "../services/auth.service";
 import { HandleError, LoginDto, RegisterDto } from "../../domain";
 
 export class AuthController {
-  private optionAuth: CookieOptions = { httpOnly: true, sameSite: 'strict', maxAge: 2000 * 60 * 60 }
-  private optionRefresh: CookieOptions = { httpOnly: true, sameSite: 'strict' }
+  private optionAuth: CookieOptions = { httpOnly: true, sameSite: 'lax', maxAge: 2000 * 60 * 60 }
+  private optionRefresh: CookieOptions = { httpOnly: true, sameSite: 'lax' }
 
   constructor(
     public readonly authService: AuthService
